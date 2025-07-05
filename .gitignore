@@ -1,0 +1,21 @@
+# Java
+/target
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# SQLite DB
+/data/users.db
+
+# IDE files
+*.iml
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+
+# Docker
+*.env
