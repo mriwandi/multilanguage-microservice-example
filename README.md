@@ -1,9 +1,4 @@
-Here is the complete `README.md` file you can include in your project:
-
----
-
-````markdown
-# 🧪 Microservices Backend Tech Challenge
+# 🧪 99 Backend Tech Challenge
 
 This project showcases a microservices-based backend system using:
 
@@ -27,7 +22,7 @@ Verify installation:
 ```bash
 docker -v
 docker compose version
-````
+```
 
 ---
 
@@ -36,8 +31,8 @@ docker compose version
 Clone the repository and navigate into the project directory:
 
 ```bash
-git clone <your-repository-url>
-cd <your-project-directory>
+git clone https://github.com/mriwandi/99-backend-challenge.git
+cd 99-backend-challenge
 ```
 
 Run all services using Docker Compose:
@@ -48,11 +43,11 @@ docker compose up --build
 
 The following ports will be exposed:
 
-| Service         | Port |
-| --------------- | ---- |
-| user-service    | 8080 |
-| listing-service | 6000 |
-| public-api      | 8888 |
+| Service         | Port  |
+|-----------------|--------|
+| user-service    | 8080   |
+| listing-service | 6000   |
+| public-api      | 8888   |
 
 ---
 
@@ -74,7 +69,7 @@ The following ports will be exposed:
 
 #### 1. Create User
 
-**POST** `/public-api/users`
+**POST** `/public-api/users`  
 **Content-Type:** `application/json`
 
 ```json
@@ -85,7 +80,7 @@ The following ports will be exposed:
 
 #### 2. Create Listing
 
-**POST** `/public-api/listings`
+**POST** `/public-api/listings`  
 **Content-Type:** `application/json`
 
 ```json
@@ -100,28 +95,7 @@ The following ports will be exposed:
 
 **GET** `/public-api/listings?page_num=1&page_size=10`
 
-**Optional:** `user_id=1` to filter by user
-
----
-
-### 🧠 Internal APIs (not for direct use)
-
-| Service         | Base URL                         |
-| --------------- | -------------------------------- |
-| user-service    | `http://localhost:8080/users`    |
-| listing-service | `http://localhost:6000/listings` |
-
----
-
-## 🐳 Docker Commands
-
-### View logs:
-
-```bash
-docker logs -f user-service
-docker logs -f listing-service
-docker logs -f public-api
-```
+Optional: add `&user_id=1` to filter by user
 
 ### Stop all services:
 
@@ -133,22 +107,12 @@ docker compose down
 
 ## ⚙️ Notes
 
-* All data is stored in Docker volumes, including `/data/users.db` for SQLite.
-* All services communicate strictly via REST APIs.
-* No additional setup is required to run this project on any machine with Docker installed.
+- All data is stored in Docker volumes, including `/data/users.db` for SQLite.
+- All services communicate strictly via REST APIs.
+- No additional setup is required to run this project on any machine with Docker installed.
 
 ---
 
 ## 🙌 Author
 
 Built with ❤️ by Muhammad Riwandi
-
-```
-
----
-
-Let me know if you'd like:
-- a diagram (e.g. Mermaid or image)
-- `.env` file support
-- auto-testing instructions or Postman collection link
-```
